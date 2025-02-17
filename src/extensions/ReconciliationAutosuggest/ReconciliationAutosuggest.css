@@ -1,0 +1,42 @@
+.reconciliation-autosuggest {
+  display: inline;
+  position: relative;
+  z-index: 1;
+}
+
+.reconciliation-autosuggest input {
+  border-radius: 3px;
+  font-size: 12px;
+  padding: 4px;
+  outline: none;
+}
+
+.reconciliation-autosuggest ul {
+  background-color: #fff;
+  border-radius: 3px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.25);
+  list-style-type: none;
+  margin: 0;
+  max-height: 200px;
+  min-width: 180px;
+  overflow-y: auto;
+  padding: 0;
+  position: absolute;
+  z-index: 9999;
+}
+
+.reconciliation-autosuggest li {
+  align-items: center;
+  box-sizing: border-box;
+  cursor: pointer;
+  display: flex;
+  font-size: 12px;
+  justify-content: space-between;
+  padding: 3px 8px;
+  width: 100%;
+}
+
+.reconciliation-autosuggest li button {
+  all: unset;
+  font-size: 1rem;
+}
