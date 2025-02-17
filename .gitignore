@@ -1,2 +1,4 @@
+.astro/
+.dev/
 dist/
 node_modules/
