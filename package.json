@@ -2,8 +2,6 @@
   "name": "@recogito/plugin-reconciliation-service",
   "version": "0.1.0",
   "description": "Use a Reconciliation Service API endpoint as a tag source in Recogito Studio projects",
-  "license": "AGPL-3.0",
-  "author": "Rainer Simon",
   "type": "module",
   "main": "dist/index.js",
   "files": [
@@ -19,7 +17,6 @@
   },
   "dependencies": {
     "@radix-ui/react-popover": "^1.1.5",
-    "@recogito/studio-sdk": "file:../studio-sdk",
     "use-debounce": "^10.0.4"
   },
   "devDependencies": {
