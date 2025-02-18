@@ -10,11 +10,12 @@
   "scripts": {
     "dev": "npm start --prefix .dev/",
     "build": "tsc && npm run copy-css",
-    "copy-css": "copyfiles -u 1 \"src/extensions/**/*.css\" dist"
+    "copy-css": "copyfiles -u 1 \"src/extensions/**/*.css\" dist",
+    "publish": "npm publish --access public "
   },
   "exports": {
     ".": "./dist/index.js",
-    "./ReconciliationAutosuggest": "./dist/extensions/ReconciliationAutosuggest.js"
+    "./ReconciliationAutosuggest": "./dist/extensions/ReconciliationAutosuggest/index.js"
   },
   "dependencies": {
     "@radix-ui/react-popover": "^1.1.5",

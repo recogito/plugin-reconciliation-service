@@ -7,8 +7,7 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro",
-    "reconciliation-service-plugin": "file:../package.json"
+    "astro": "astro"
   },
   "dependencies": {
     "@astrojs/node": "^9.0.2",
@@ -16,6 +15,7 @@
     "@types/react": "^19.0.8",
     "@types/react-dom": "^19.0.3",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "@recogito/plugin-reconciliation-service": "file:../"
   }
 }
