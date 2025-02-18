@@ -5,6 +5,8 @@
 }
 
 .reconciliation-autosuggest input {
+  background-color: #00ff00;
+  border: 1px solid #ff0000;
   border-radius: 3px;
   font-size: 12px;
   padding: 4px;
