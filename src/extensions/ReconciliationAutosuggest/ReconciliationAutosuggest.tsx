@@ -1,35 +1,13 @@
 import { useCallback, useEffect, useState } from 'react';
 import { useDebounce } from 'use-debounce';
 import * as Popover from '@radix-ui/react-popover';
-import { VocabularyTerm } from '@recogito/studio-sdk';
+import { TagAutosuggestExtensionProps } from '@recogito/studio-sdk';
 import { AutosizeInput } from '@recogito/studio-sdk/components';
 import { ReconciliationResult } from 'src/types';
 
 import './ReconciliationAutosuggest.css';
 
-interface AutosuggestProps {
-  
-  autoFocus?: boolean;
-
-  autoSize?: boolean;
-
-  openOnFocus?: boolean;
-
-  placeholder?: string;
-
-  value?: VocabularyTerm;
-
-  vocabulary?: VocabularyTerm[];
-
-  onChange(value: VocabularyTerm): void;
-
-  onSubmit(value: VocabularyTerm): void;
-
-  onCancel?(): void;
-
-}
-
-export const ReconciliationAutosuggest = (props: AutosuggestProps) => {
+export const ReconciliationAutosuggest = (props: TagAutosuggestExtensionProps) => {
 
   const [query, setQuery] = useState('');
 
