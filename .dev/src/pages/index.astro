@@ -1,8 +1,8 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import { ExtensionRegistry, ExtensionMount } from '../plugins';
+import { PluginRegistry, ExtensionMount } from '../plugins';
 
-const extensions = ExtensionRegistry.listExtensions();
+const extensions = PluginRegistry.enumerateExtensions();
 ---
 
 <Layout>

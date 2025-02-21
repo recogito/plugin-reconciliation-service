@@ -1,2 +1,2 @@
 export * from './ExtensionMount';
-export * from './ExtensionRegistry';
+export * from './PluginRegistry';
