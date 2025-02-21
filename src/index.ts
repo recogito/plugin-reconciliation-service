@@ -9,7 +9,7 @@ export const ReconciliationAutosuggestExtension: Extension = {
 
   component_name: 'ReconciliationAutosuggest',
 
-  extension_point: '*'
+  extension_point: 'annotation.*.tag-autosuggest'
 
 }
 
