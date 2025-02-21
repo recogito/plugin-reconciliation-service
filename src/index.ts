@@ -13,7 +13,6 @@ export const ReconciliationAutosuggestPlugin: Plugin<ReconciliationPluginOpts> =
   homepage: 'https://www.performantsoftware.com/',
 
   extensions: [{
-
     name: 'reconciliation-autosuggest',
 
     module_name: '@recogito/plugin-reconciliation-service',
@@ -21,7 +20,14 @@ export const ReconciliationAutosuggestPlugin: Plugin<ReconciliationPluginOpts> =
     component_name: 'ReconciliationAutosuggest',
   
     extension_point: 'annotation:*:tag-autosuggest'
+  }, {
+    name: 'reconciliation-plugin-admin',
 
+    module_name: '@recogito/plugin-reconciliation-service',
+  
+    component_name: 'ReconciliationPluginAdmin',
+  
+    extension_point: 'admin'
   }],
 
   options: {

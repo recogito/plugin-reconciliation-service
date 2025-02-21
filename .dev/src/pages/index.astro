@@ -11,14 +11,15 @@ const extensions = PluginRegistry.enumerateExtensions();
   <main>
     <h2>Registered Extensions: {extensions.length}</h2>
     <ul>
-      {extensions.map(e => ( 
+      {extensions.map(({ extension, plugin }) => ( 
         <li>
-          <h3>{e.module_name}/{e.name}</h3>
-          <p>Extends: {e.extension_point}</p>
+          <h3>{extension.module_name}/{extension.name}</h3>
+          <p>Extends: {extension.extension_point}</p>
           <div class="extension-container">
             <ExtensionMount 
               client:only="react"
-              extension={e} />
+              extension={extension} 
+              plugin={plugin} />
           </div>
         </li>
       ))}

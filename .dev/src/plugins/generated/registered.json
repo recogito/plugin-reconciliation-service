@@ -10,6 +10,12 @@
         "module_name": "@recogito/plugin-reconciliation-service",
         "component_name": "ReconciliationAutosuggest",
         "extension_point": "annotation:*:tag-autosuggest"
+      },
+      {
+        "name": "reconciliation-plugin-admin",
+        "module_name": "@recogito/plugin-reconciliation-service",
+        "component_name": "ReconciliationPluginAdmin",
+        "extension_point": "admin"
       }
     ],
     "options": {

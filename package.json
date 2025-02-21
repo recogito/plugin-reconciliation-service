@@ -18,11 +18,12 @@
   },
   "exports": {
     ".": "./dist/index.js",
-    "./ReconciliationAutosuggest": "./dist/extensions/ReconciliationAutosuggest/index.js"
+    "./ReconciliationAutosuggest": "./dist/extensions/ReconciliationAutosuggest/index.js",
+    "./ReconciliationPluginAdmin": "./dist/extensions/ReconciliationPluginAdmin/index.js"
   },
   "dependencies": {
     "@radix-ui/react-popover": "^1.1.5",
-    "@recogito/studio-sdk": "^0.2.0",
+    "@recogito/studio-sdk": "^0.2.2",
     "use-debounce": "^10.0.4"
   },
   "devDependencies": {

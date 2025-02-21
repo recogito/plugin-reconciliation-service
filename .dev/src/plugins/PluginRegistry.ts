@@ -16,8 +16,9 @@ export const PluginRegistry = {
     return [...registry];
   },
 
-  enumerateExtensions: (): Extension[] => {
-    return registry.reduce<Extension[]>((all, plugin) => ([...all, ...plugin.extensions]), []);
+  enumerateExtensions: (): { extension: Extension, plugin: Plugin }[] => {
+    return registry.reduce<{extension: Extension, plugin: Plugin}[]>((all, plugin) => 
+      ([...all, ...plugin.extensions.map(extension => ({ extension, plugin }))]), []);
   }
   
 }
