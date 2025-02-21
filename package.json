@@ -5,9 +5,11 @@
   "type": "module",
   "main": "dist/index.js",
   "files": [
-    "dist"
+    "dist",
+    "src"
   ],
   "scripts": {
+    "prepare": "npm run build",
     "dev": "npm start --prefix .dev/",
     "build": "tsc && npm run copy-css",
     "copy-css": "copyfiles -u 1 \"src/extensions/**/*.css\" dist",
