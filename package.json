@@ -22,7 +22,7 @@
   },
   "dependencies": {
     "@radix-ui/react-popover": "^1.1.5",
-    "@recogito/studio-sdk": "file:../recogito-studio-sdk",
+    "@recogito/studio-sdk": "^0.2.0",
     "use-debounce": "^10.0.4"
   },
   "devDependencies": {
