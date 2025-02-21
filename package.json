@@ -6,8 +6,7 @@
   "main": "dist/index.js",
   "files": [
     "dist",
-    "src",
-    "plugin.config.json"
+    "src"
   ],
   "scripts": {
     "prepare": "npm run build",
