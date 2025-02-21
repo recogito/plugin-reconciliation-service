@@ -19,3 +19,19 @@ interface ReconciliationResultType {
   name: string;
 
 }
+
+export interface ReconciliationPluginOpts {
+
+  endpoints: EndpointConfig[];
+
+}
+
+export interface EndpointConfig {
+
+  name: string;
+
+  url: string;
+
+  type?: string;
+
+}
