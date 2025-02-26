@@ -2,16 +2,18 @@
   display: inline;
   position: relative;
   z-index: 1;
+  box-sizing: content-box;
 }
 
 .reconciliation-autosuggest input {
-  background-color: #00ff00;
-  border: 1px solid #ff0000;
+  background-color: #f3f4f7;
+  border: 1px solid #6f747c;
   border-radius: 3px;
   font-size: 12px;
   padding: 4px;
   outline: none;
   min-width: 16px;
+  box-sizing: content-box;
 }
 
 .reconciliation-autosuggest ul {
