@@ -1,0 +1,48 @@
+import { useState } from "react";
+import { createBody } from '@annotorious/react';
+import { AnnotationEditorExtensionProps, VocabularyTerm } from "@recogito/studio-sdk";
+import { ReconciliationAutosuggest } from "./components/ReconciliationAutosuggest";
+
+export const ReconciliationEditorExtension = (props: AnnotationEditorExtensionProps) => {
+
+  const { annotation, me } = props;
+
+  const [isOpen, setIsOpen] = useState(false);
+
+  const onChange = (term: VocabularyTerm) => {
+    // ...nothing to do
+  }
+
+  const onSubmit = (term: VocabularyTerm) => {
+    const updated = {
+      ...annotation,
+      bodies: [
+        ...annotation.bodies,
+        createBody(annotation, {
+          purpose: 'tagging',
+          value: JSON.stringify(term)
+        }, new Date(), {
+          id: me.id,
+          name: me.name,
+          avatar: me.avatar
+        })
+      ]
+    }
+
+    props.onUpdateAnnotation(updated);
+  }
+
+  return isOpen ? (
+    <ReconciliationAutosuggest
+      autoFocus
+      plugin={props.plugin}
+      extension={props.extension}
+      settings={props.settings}
+      onChange={onChange}
+      onSubmit={onSubmit}
+      />
+  ) : (
+    <button onClick={() => setIsOpen(true)}>Add Getty Tag</button>
+  )
+
+}

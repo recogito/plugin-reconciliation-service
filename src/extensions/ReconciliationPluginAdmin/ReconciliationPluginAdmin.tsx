@@ -1,7 +1,7 @@
-import { AdminExtensionExtensionProps, Plugin } from '@recogito/studio-sdk';
+import { AdminExtensionProps, Plugin } from '@recogito/studio-sdk';
 import { ReconciliationPluginOpts } from 'src/types';
 
-export const ReconciliationPluginAdmin = (props: AdminExtensionExtensionProps) => {
+export const ReconciliationPluginAdmin = (props: AdminExtensionProps) => {
 
   const { onChangeUserSettings, settings } = props;
 
