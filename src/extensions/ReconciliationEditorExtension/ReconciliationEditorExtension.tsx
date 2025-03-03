@@ -30,6 +30,9 @@ export const ReconciliationEditorExtension = (props: AnnotationEditorExtensionPr
     }
 
     props.onUpdateAnnotation(updated);
+
+    // Close the input field after adding the tag
+    setIsOpen(false);
   }
 
   return isOpen ? (
