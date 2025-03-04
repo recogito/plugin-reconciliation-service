@@ -2,6 +2,9 @@ import { useState } from "react";
 import { createBody } from '@annotorious/react';
 import { AnnotationEditorExtensionProps, VocabularyTerm } from "@recogito/studio-sdk";
 import { ReconciliationAutosuggest } from "./components/ReconciliationAutosuggest";
+import {Tag} from '@phosphor-icons/react';
+
+import './ReconciliationEditorExtension.css'
 
 export const ReconciliationEditorExtension = (props: AnnotationEditorExtensionProps) => {
 
@@ -45,7 +48,7 @@ export const ReconciliationEditorExtension = (props: AnnotationEditorExtensionPr
       onSubmit={onSubmit}
       />
   ) : (
-    <button onClick={() => setIsOpen(true)}>Add Getty Tag</button>
+    <button className='reconciliation-button' onClick={() => setIsOpen(true)}><Tag/>Add Getty Tag</button>
   )
 
 }
