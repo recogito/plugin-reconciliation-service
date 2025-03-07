@@ -18,6 +18,7 @@
   },
   "exports": {
     ".": "./dist/index.js",
+    "./thumbnail": "./assets/reconciliation-mona-lisa.jpg",
     "./ReconciliationEditorExtension": "./dist/extensions/ReconciliationEditorExtension/index.js",
     "./ReconciliationPluginAdmin": "./dist/extensions/ReconciliationPluginAdmin/index.js"
   },
