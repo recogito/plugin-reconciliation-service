@@ -1,8 +1,9 @@
 .reconciliation-autosuggest {
-  display: inline;
   position: relative;
   z-index: 1;
   box-sizing: content-box;
+  margin-left: 12px;
+  margin-bottom: 10px;
 }
 
 .reconciliation-autosuggest input {
