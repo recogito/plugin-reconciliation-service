@@ -1,3 +1,9 @@
+export interface ReconciliationPluginInstanceSettings {
+
+  endpoint: EndpointConfig;
+
+}
+
 export interface ReconciliationResult {
 
   id: string;

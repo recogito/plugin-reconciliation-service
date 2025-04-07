@@ -3,10 +3,11 @@ import { createBody } from '@annotorious/react';
 import { AnnotationEditorExtensionProps, VocabularyTerm } from "@recogito/studio-sdk";
 import { ReconciliationAutosuggest } from "./components/ReconciliationAutosuggest";
 import {Tag} from '@phosphor-icons/react';
+import { ReconciliationPluginInstanceSettings } from "src/types";
 
 import './ReconciliationEditorExtension.css'
 
-export const ReconciliationEditorExtension = (props: AnnotationEditorExtensionProps) => {
+export const ReconciliationEditorExtension = (props: AnnotationEditorExtensionProps<ReconciliationPluginInstanceSettings>) => {
 
   const { annotation, me } = props;
 

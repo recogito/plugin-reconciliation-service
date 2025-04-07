@@ -1,26 +1,38 @@
+import { useState } from 'react';
 import { AdminExtensionProps, Plugin } from '@recogito/studio-sdk';
-import { ReconciliationPluginOpts } from 'src/types';
+import { 
+  EndpointConfig, 
+  ReconciliationPluginOpts, 
+  ReconciliationPluginInstanceSettings 
+} from 'src/types';
 
-export const ReconciliationPluginAdmin = (props: AdminExtensionProps) => {
+export const ReconciliationPluginAdmin = (props: AdminExtensionProps<ReconciliationPluginInstanceSettings>) => {
 
   const { onChangeUserSettings, settings } = props;
 
   const plugin = props.plugin as Plugin<ReconciliationPluginOpts>;
 
-  const endpoints = plugin.options?.endpoints || [];
+  const availableEndpoints = plugin.options?.endpoints || [];
 
-  // TODO needs to show the currently configured endpoint
+  const [endpoint, setEndpoint] = useState<EndpointConfig | undefined>(settings?.endpoint);
 
-  // TODO when the selection changes, change the user settings via the 
-  // onChangeUserSettings callback
+  const onChange = (name: string) => {
+    const endpoint = availableEndpoints.find(e => e.name === name);
+    setEndpoint(endpoint);
 
-  // Note that `settings` will always be undefined in the test app!
+    if (endpoint)
+      onChangeUserSettings({ endpoint });
+  }
 
   return (
     <div className="reconciliation-plugin-admin">
       <h3>Select an endpoint</h3>
-      <select name="cars" id="cars">
-        {endpoints.map(endpoint => (
+      <select 
+        name="endpoints" 
+        id="endpoints"
+        value={endpoint?.name}
+        onChange={evt => onChange(evt.target.value)}>
+        {availableEndpoints.map(endpoint => (
           <option 
             key={endpoint.name}
             value={endpoint.name}>{endpoint.name}</option>

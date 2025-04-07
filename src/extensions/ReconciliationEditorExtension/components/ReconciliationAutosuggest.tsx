@@ -3,12 +3,18 @@ import { useDebounce } from "use-debounce";
 import * as Popover from "@radix-ui/react-popover";
 import { TagAutosuggestExtensionProps } from "@recogito/studio-sdk";
 import { AutosizeInput } from "@recogito/studio-sdk/components";
-import { ReconciliationResult } from "src/types";
+import { ReconciliationPluginInstanceSettings, ReconciliationResult } from "src/types";
 
 import "./ReconciliationAutosuggest.css";
 
+interface ReconciliationAutosuggestProps extends TagAutosuggestExtensionProps {
+
+  settings?: ReconciliationPluginInstanceSettings;
+
+}
+
 export const ReconciliationAutosuggest = (
-  props: TagAutosuggestExtensionProps
+  props: ReconciliationAutosuggestProps
 ) => {
   const [query, setQuery] = useState("");
 
@@ -27,6 +33,8 @@ export const ReconciliationAutosuggest = (
   }, []);
 
   useEffect(() => {
+    if (!props.settings) return;
+
     if (!debounced.trim()) {
       reset();
       return;
@@ -37,10 +45,10 @@ export const ReconciliationAutosuggest = (
     const formData = new FormData();
     formData.append(
       "queries",
-      JSON.stringify({ q0: { query: debounced.trim(), type: "/aat" } })
+      JSON.stringify({ q0: { query: debounced.trim(), type: props.settings.endpoint.type } })
     );
 
-    fetch("https://services.getty.edu/vocab/reconcile", {
+    fetch(props.settings.endpoint.url, {
       method: "POST",
       body: formData,
     })
@@ -54,7 +62,7 @@ export const ReconciliationAutosuggest = (
         console.error(error);
         reset();
       });
-  }, [debounced, reset]);
+  }, [debounced, reset, props.settings]);
 
   const onSelect = useCallback(
     (result: ReconciliationResult) => () => {
