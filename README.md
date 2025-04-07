@@ -13,7 +13,7 @@ Use a Reconciliation Service API endpoint as a tag source in Recogito Studio pro
 Go into your Recogito Client folder. To install the plugin package, run:
 
 ```
-npm install https://github.com/recogito/plugin-reconciliation-service
+npm install @recogito/plugin-reconciliation-service
 ```
 
 Edit your `astro.config.mjs`:
