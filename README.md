@@ -2,21 +2,15 @@
 
 Use a Reconciliation Service API endpoint as a tag source in Recogito Studio projects.
 
-## Development
-
-- Run `npm install` in the root and the `.dev` folder.
-- Run `npm run build` to build the plugin
-- Run `npm run dev` to preview the plugin in the test app.
-
 ## Installation
 
-Go into your Recogito Client folder. To install the plugin package, run:
+#### 1. Change into your Recogito Client folder. To install the plugin package, run:
 
 ```
 npm install @recogito/plugin-reconciliation-service
 ```
 
-Edit your `astro.config.mjs`:
+#### 2. Edit your `astro.config.mjs`:
 
 ```diff
 import { defineConfig } from 'astro/config';
@@ -45,4 +39,10 @@ export default defineConfig({
 });
 ```
 
-Restart the Recogito Client.
+#### 3. Restart the Recogito Client.
+
+## Development
+
+- Run `npm install` in the root and the `.dev` folder.
+- Run `npm run build` to build the plugin
+- Run `npm run dev` to preview the plugin in the test app.
