@@ -23,17 +23,17 @@
     "./ReconciliationPluginAdmin": "./dist/extensions/ReconciliationPluginAdmin/index.js"
   },
   "dependencies": {
-    "@annotorious/react": "^3.3.3",
+    "@annotorious/react": "^3.3.4",
     "@phosphor-icons/react": "^2.1.7",
-    "@radix-ui/react-popover": "^1.1.6",
-    "@recogito/studio-sdk": "^0.4.1",
+    "@radix-ui/react-popover": "^1.1.10",
+    "@recogito/studio-sdk": "^0.4.2",
     "use-debounce": "^10.0.4",
     "uuid": "^11.1.0"
   },
   "devDependencies": {
-    "@types/node": "^22.14.0",
-    "@types/react": "^19.1.0",
-    "@types/react-dom": "^19.1.1",
+    "@types/node": "^22.14.1",
+    "@types/react": "^19.1.2",
+    "@types/react-dom": "^19.1.2",
     "copyfiles": "^2.4.1",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
