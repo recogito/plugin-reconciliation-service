@@ -1,6 +1,12 @@
 # Reconciliation Service API Plugin
 
 Use a Reconciliation Service API endpoint as a tag source in Recogito Studio projects.
+Currently has three endpoint pre-sets configured from which the user can choose:
+
+- Getty Arts and Architecture Thesaurus (AAT)
+- Getty Thesaurus of Geographic Names (TGN)
+- Getty Union List of Artist Names (ULAN)
+- Getty (All Vocabularies)
 
 ## Installation
 
