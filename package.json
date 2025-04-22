@@ -1,6 +1,6 @@
 {
   "name": "@recogito/plugin-reconciliation-service",
-  "version": "0.8.0",
+  "version": "0.9.0",
   "description": "Use a Reconciliation Service API endpoint as a tag source in Recogito Studio projects",
   "type": "module",
   "main": "dist/index.js",
@@ -12,9 +12,7 @@
     "prepare": "npm run build",
     "dev": "npm start --prefix .dev/",
     "build": "tsc && npm run copy-css",
-    "copy-css": "copyfiles -u 1 \"src/extensions/**/*.css\" dist",
-    "publish": "npm publish --access public",
-    "publish-beta": "npm publish --access public --tag beta"
+    "copy-css": "copyfiles -u 1 \"src/extensions/**/*.css\" dist"
   },
   "exports": {
     ".": "./dist/index.js",
@@ -26,7 +24,7 @@
     "@annotorious/react": "^3.3.4",
     "@phosphor-icons/react": "^2.1.7",
     "@radix-ui/react-popover": "^1.1.10",
-    "@recogito/studio-sdk": "^0.4.2",
+    "@recogito/studio-sdk": "^0.5.0",
     "use-debounce": "^10.0.4",
     "uuid": "^11.1.0"
   },

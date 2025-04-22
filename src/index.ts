@@ -6,6 +6,8 @@ export const ReconciliationAutosuggestPlugin: Plugin<ReconciliationPluginOpts> =
 
   name: 'Reconciliation Service API',
 
+  module_name: '@recogito/plugin-reconciliation-service',
+  
   description: 'Use a Reconciliation Service API endpoint as a tag source in your projects.',
 
   author: 'Performant Software',
@@ -14,16 +16,12 @@ export const ReconciliationAutosuggestPlugin: Plugin<ReconciliationPluginOpts> =
 
   extensions: [{
     name: 'reconciliation-extension',
-
-    module_name: '@recogito/plugin-reconciliation-service',
   
     component_name: 'ReconciliationEditorExtension',
   
     extension_point: 'annotation:*:annotation-editor'
   }, {
     name: 'reconciliation-plugin-admin',
-
-    module_name: '@recogito/plugin-reconciliation-service',
   
     component_name: 'ReconciliationPluginAdmin',
   
