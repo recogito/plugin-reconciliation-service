@@ -14,6 +14,8 @@ export const ReconciliationAutosuggestPlugin: Plugin<ReconciliationPluginOpts> =
 
   homepage: 'https://www.performantsoftware.com/',
 
+  thumbnail: 'thumbnail.jpg',
+
   extensions: [{
     name: 'reconciliation-extension',
   

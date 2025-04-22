@@ -1,6 +1,6 @@
 {
   "name": "@recogito/plugin-reconciliation-service",
-  "version": "0.9.0",
+  "version": "0.9.1",
   "description": "Use a Reconciliation Service API endpoint as a tag source in Recogito Studio projects",
   "type": "module",
   "main": "dist/index.js",
@@ -11,12 +11,12 @@
   "scripts": {
     "prepare": "npm run build",
     "dev": "npm start --prefix .dev/",
-    "build": "tsc && npm run copy-css",
-    "copy-css": "copyfiles -u 1 \"src/extensions/**/*.css\" dist"
+    "build": "tsc && npm run copy-files",
+    "copy-files": "copyfiles -u 1 \"src/extensions/**/*.css\" \"src/assets/**/*\" dist"
   },
   "exports": {
     ".": "./dist/index.js",
-    "./thumbnail": "./assets/reconciliation-mona-lisa.jpg",
+    "./thumbnail.jpg": "./dist/assets/reconciliation-mona-lisa.jpg",
     "./ReconciliationEditorExtension": "./dist/extensions/ReconciliationEditorExtension/index.js",
     "./ReconciliationPluginAdmin": "./dist/extensions/ReconciliationPluginAdmin/index.js"
   },
