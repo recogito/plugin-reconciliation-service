@@ -1,6 +1,6 @@
 {
   "name": "@recogito/plugin-reconciliation-service",
-  "version": "0.9.3",
+  "version": "0.9.4",
   "description": "Use a Reconciliation Service API endpoint as a tag source in Recogito Studio projects",
   "type": "module",
   "main": "dist/index.js",
