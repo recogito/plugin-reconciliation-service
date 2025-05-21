@@ -46,3 +46,7 @@
   all: unset;
   font-size: 1rem;
 }
+
+.reconciliation-popover {
+  z-index: 999;
+}

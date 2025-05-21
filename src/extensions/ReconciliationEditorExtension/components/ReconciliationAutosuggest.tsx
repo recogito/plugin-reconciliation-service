@@ -3,9 +3,9 @@ import { useDebounce } from "use-debounce";
 import * as Popover from "@radix-ui/react-popover";
 import { TagAutosuggestExtensionProps } from "@recogito/studio-sdk";
 import { AutosizeInput } from "@recogito/studio-sdk/components";
-import { ReconciliationPluginInstanceSettings, ReconciliationResult } from "src/types";
+import { ReconciliationPluginInstanceSettings, ReconciliationPluginOpts, ReconciliationResult } from "src/types";
 
-import "./ReconciliationAutosuggest.css";
+import './ReconciliationAutosuggest.css';
 
 interface ReconciliationAutosuggestProps extends TagAutosuggestExtensionProps {
 
@@ -16,47 +16,41 @@ interface ReconciliationAutosuggestProps extends TagAutosuggestExtensionProps {
 export const ReconciliationAutosuggest = (
   props: ReconciliationAutosuggestProps
 ) => {
+  // User-configured endpoint, or fall back to first endpoint in plugin config
+  const endpoint = props.settings?.endpoint || 
+    (props.plugin.options as ReconciliationPluginOpts)?.endpoints[0];
+
+  if (!endpoint) return;
+
   const [query, setQuery] = useState("");
 
   const [debounced] = useDebounce(query, 350);
-
-  const [busy, setBusy] = useState(false);
-
-  const [failed, setFailed] = useState(false);
 
   const [results, setResults] = useState<ReconciliationResult[]>([]);
 
   const reset = useCallback(() => {
     setResults([]);
-    setBusy(false);
-    setFailed(false);
   }, []);
 
   useEffect(() => {
-    if (!props.settings) return;
-
     if (!debounced.trim()) {
       reset();
       return;
     }
 
-    setBusy(true);
-
     const formData = new FormData();
     formData.append(
       "queries",
-      JSON.stringify({ q0: { query: debounced.trim(), type: props.settings.endpoint.type } })
+      JSON.stringify({ q0: { query: debounced.trim(), type: endpoint.type } })
     );
 
-    fetch(props.settings.endpoint.url, {
+    fetch(endpoint.url, {
       method: "POST",
       body: formData,
     })
       .then((res) => res.json())
       .then((data) => {
         setResults(data.q0.result);
-        setBusy(false);
-        setFailed(false);
       })
       .catch((error) => {
         console.error(error);

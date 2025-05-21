@@ -31,6 +31,7 @@ export const ReconciliationPluginAdmin = (props: AdminExtensionProps<Reconciliat
         name="endpoints" 
         id="endpoints"
         value={endpoint?.name}
+        className="select-trigger"
         onChange={evt => onChange(evt.target.value)}>
         {availableEndpoints.map(endpoint => (
           <option 
