@@ -1,6 +1,6 @@
 .reconciliation-autosuggest {
   position: relative;
-  z-index: 1;
+  z-index: 999;
   box-sizing: content-box;
   margin-left: 12px;
 }
