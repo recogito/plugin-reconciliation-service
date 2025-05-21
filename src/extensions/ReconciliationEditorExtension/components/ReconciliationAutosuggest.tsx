@@ -1,15 +1,23 @@
 import { useCallback, useEffect, useState } from "react";
 import { useDebounce } from "use-debounce";
 import * as Popover from "@radix-ui/react-popover";
-import { TagAutosuggestExtensionProps } from "@recogito/studio-sdk";
+import { Plugin, VocabularyTerm } from "@recogito/studio-sdk";
 import { AutosizeInput } from "@recogito/studio-sdk/components";
 import { ReconciliationPluginInstanceSettings, ReconciliationPluginOpts, ReconciliationResult } from "src/types";
 
 import './ReconciliationAutosuggest.css';
 
-interface ReconciliationAutosuggestProps extends TagAutosuggestExtensionProps {
+interface ReconciliationAutosuggestProps {
+
+  autoFocus?: boolean;
+
+  plugin: Plugin;
 
   settings?: ReconciliationPluginInstanceSettings;
+
+  onChange(term: VocabularyTerm): void;
+
+  onSubmit(term: VocabularyTerm): void;
 
 }
 

@@ -21,7 +21,7 @@ export const ReconciliationAutosuggestPlugin: Plugin<ReconciliationPluginOpts> =
   
     component_name: 'ReconciliationEditorExtension',
   
-    extension_point: 'annotation:*:annotation-editor'
+    extension_point: 'annotation:*:taglist'
   }, {
     name: 'reconciliation-plugin-admin',
   

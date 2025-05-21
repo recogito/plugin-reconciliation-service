@@ -2,7 +2,7 @@ import { useState } from "react";
 import { createBody } from '@annotorious/react';
 import { AnnotationEditorExtensionProps, VocabularyTerm } from "@recogito/studio-sdk";
 import { ReconciliationAutosuggest } from "./components/ReconciliationAutosuggest";
-import {Tag} from '@phosphor-icons/react';
+import { Tag } from '@phosphor-icons/react';
 import { ReconciliationPluginInstanceSettings } from "src/types";
 
 import './ReconciliationEditorExtension.css'
@@ -43,7 +43,6 @@ export const ReconciliationEditorExtension = (props: AnnotationEditorExtensionPr
     <ReconciliationAutosuggest
       autoFocus
       plugin={props.plugin}
-      extension={props.extension}
       settings={props.settings}
       onChange={onChange}
       onSubmit={onSubmit}

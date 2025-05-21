@@ -24,7 +24,7 @@
     "@annotorious/react": "^3.3.6",
     "@phosphor-icons/react": "^2.1.7",
     "@radix-ui/react-popover": "^1.1.14",
-    "@recogito/studio-sdk": "^0.6.4",
+    "@recogito/studio-sdk": "^0.6.6",
     "use-debounce": "^10.0.4",
     "uuid": "^11.1.0"
   },
