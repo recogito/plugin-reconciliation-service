@@ -48,7 +48,7 @@ export const ReconciliationEditorExtension = (props: AnnotationEditorExtensionPr
       onSubmit={onSubmit}
       />
   ) : (
-    <button className='reconciliation-button' onClick={() => setIsOpen(true)}><Tag/>Add Getty Tag</button>
+    <button className='reconciliation-button tag-editor-trigger' onClick={() => setIsOpen(true)}><Tag/>Add Getty Tag</button>
   )
 
 }
