@@ -16,7 +16,11 @@
   box-sizing: content-box;
 }
 
-.reconciliation-autosuggest ul {
+.reconciliation-popover {
+  z-index: 9999;
+}
+
+.reconciliation-popover ul {
   background-color: #fff;
   border-radius: 3px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
@@ -26,11 +30,9 @@
   min-width: 300px;
   overflow-y: auto;
   padding: 0;
-  position: absolute;
-  z-index: 9999;
 }
 
-.reconciliation-autosuggest li {
+.reconciliation-popover li {
   align-items: center;
   box-sizing: border-box;
   cursor: pointer;
@@ -41,11 +43,7 @@
   width: 100%;
 }
 
-.reconciliation-autosuggest li button {
+.reconciliation-popover li button {
   all: unset;
   font-size: 1rem;
-}
-
-.reconciliation-popover {
-  z-index: 999;
 }
