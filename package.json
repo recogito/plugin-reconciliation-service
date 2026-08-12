@@ -1,6 +1,6 @@
 {
   "name": "@recogito/plugin-reconciliation-service",
-  "version": "0.9.4",
+  "version": "0.9.5",
   "description": "Use a Reconciliation Service API endpoint as a tag source in Recogito Studio projects",
   "type": "module",
   "main": "dist/index.js",
@@ -24,7 +24,7 @@
     "@annotorious/react": "^3.3.6",
     "@phosphor-icons/react": "^2.1.7",
     "@radix-ui/react-popover": "^1.1.14",
-    "@recogito/studio-sdk": "^0.6.6",
+    "@recogito/studio-sdk": "^0.9.1",
     "use-debounce": "^10.0.4",
     "uuid": "^11.1.0"
   },

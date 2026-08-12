@@ -90,22 +90,24 @@ export const ReconciliationAutosuggest = (
           />
         </Popover.Anchor>
 
-        <Popover.Content
-          onOpenAutoFocus={(evt) => evt.preventDefault()}
-          sideOffset={8}
-          align="start"
-          className="reconciliation-popover"
-        >
-          <ul>
-            {results.map((result, index) => (
-              <li key={`${result.id}-${index}`}>
-                <button onClick={onSelect(result)}>
-                  {result.id}: {result.name}
-                </button>
-              </li>
-            ))}
-          </ul>
-        </Popover.Content>
+        <Popover.Portal>
+          <Popover.Content
+            onOpenAutoFocus={(evt) => evt.preventDefault()}
+            sideOffset={8}
+            align="start"
+            className="reconciliation-popover"
+          >
+            <ul>
+              {results.map((result, index) => (
+                <li key={`${result.id}-${index}`}>
+                  <button onClick={onSelect(result)}>
+                    {result.id}: {result.name}
+                  </button>
+                </li>
+              ))}
+            </ul>
+          </Popover.Content>
+        </Popover.Portal>
       </Popover.Root>
     </div>
   );
